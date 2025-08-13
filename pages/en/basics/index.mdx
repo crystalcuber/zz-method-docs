@@ -6,9 +6,7 @@ author: crystalcuber
 
 import TwistyPlayer from "components/TwistyPlayer";
 
-The Rubik's Cube is a famously difficult puzzle, at least when trying to solve it alone. But with the help of a **solving method**, you can learn to solve the Cube! A method breaks the cube down into several simple steps.
-
-In this guide, we'll learn the basics of the Cube: how it works and how it turns. Then we'll be ready to learn how to solve it!
+Have you ever wanted to learn how to solve a Rubik's Cube? You're in the right place! In this guide, we'll learn the basics of the Cube. By the end, you'll be ready to learn a solving method!
 
 ## How the Cube Works
 
@@ -16,7 +14,7 @@ Let's start by revealing a secret of the Rubik's Cube. From the outside, it look
 
 TODO: photo of disassembled Rubik's Cube. Label the core, edges, centres and corners with `<figcaption>`
 
-It's made of **pieces**, which are _groups_ of stickers that move together! We should see the cube as pieces that carry stickers around, rather than stickers moving on their own.
+It's made of **pieces**, which are _groups_ of stickers that move together! The cube is made of pieces that carry stickers around, rather than stickers moving on their own.
 
 <div className="flex flex-col sm:flex-row">
   <TwistyPlayer
@@ -25,7 +23,7 @@ It's made of **pieces**, which are _groups_ of stickers that move together! We s
     experimentalStickeringMaskOrbits="EDGES:XXXXXXXXXXXX,CORNERS:--------,CENTERS:XXXXXX"
     hintFacelets="none"
   />
-  **Corners** are pieces that carry 3 stickers. There are 8 corners in total.
+  **Corners** are pieces that carry 3 stickers. They are always located in these 8 corner spots.
 </div>
 
 <div className="flex flex-col sm:flex-row">
@@ -35,7 +33,7 @@ It's made of **pieces**, which are _groups_ of stickers that move together! We s
     experimentalStickeringMaskOrbits="EDGES:------------,CORNERS:XXXXXXXX,CENTERS:XXXXXX"
     hintFacelets="none"
   />
-  **Edges** are pieces with 2 stickers. There are 12 edges.
+  **Edges** are pieces that carry 2 stickers. They are always located in these 12 edge spots, so they will never "mix" with corners. An edge can't move to a corner spot, and vice versa.
 </div>
 
 <div className="flex flex-col sm:flex-row">
@@ -45,31 +43,35 @@ It's made of **pieces**, which are _groups_ of stickers that move together! We s
     experimentalStickeringMaskOrbits="EDGES:XXXXXXXXXXXX,CORNERS:XXXXXXXX,CENTERS:------"
     hintFacelets="none"
   />
-  **Centres** are pieces that only have a single sticker. There are 6 centres: one on each side.
+  **Centres** carry a single sticker. They are always located in these 6 centre spots, one per side. In fact, they will never mix with each other! No matter how you turn the sides, a centre will always stay on its side.
 </div>
 
-# TEMP
-  <TwistyPlayer
-    controlPanel="none"
-    className="size-36"
-    experimentalStickeringMaskOrbits="EDGES:IIIII-II-I-I,CORNERS:IIII-II-,CENTERS:III-II"
-    hintFacelets="none"
-  />
+Play around with the cube and do random turns, or use the widget below. Observe the following:
+- Stickers move together in groups of pieces
+- Corner, edge and centre pieces don't mix
+- Centres stay on the same side when you turn the sides
+
+{/* TODO: make this a custom component that has just a play/pause button? */}
+<TwistyPlayer
+  experimentalSetupAlg="R2 D' U2 B2 L2 D R2 U2 L2 U' L F D2 R2 B' D2 R D' B2 L2"
+  alg="D B' L' U L2 D' L2 R2 U' R2 F2 D' R2 U2 R' B2 D L R B' F'"
+  hintFacelets="none"
+  viewerLink="none"
+/>
+
+## Solving Goal
+
+we want to reframe the goal of solving the cube from "all sides same colour" to "get every piece in its solved arrangement"
+
+make very clear that the centres define what colour belongs solved on that side. we can't choose to solve green next to blue. centres dictate the colour to be solved on its side.
+
+in general, the idea of stickers being attached to pieces, that imposes a restriction on how the stickers can move around. 
+
+
+It seems that the goal is to solve the cube, one side at a time.
+But when we try, we find a problem:
+Suppose we solved the blue side, and now we want to solve the orange side.
 
 
 
-## Cube turns
-simple guide that outlines how turns move pieces around
-like centres don't get moved around by face turns, and how corners and edges "don't mix" (have separate orbits)
-and definitely link to a full guide somewhere else 
-idea: have a little widget that either shows a bunch of random moves, or lets you mash some buttons to randomly turn the cube
-either way, the point of the widget is to show certain properties of the cube, such as centres staying in place, stickers moving in groups of corners/edges, corners/edges in separate orbits etc.
-actually it can be a fully automatic thing, like remember Lucas' MKBHD demo
-
-also have a bit that talks about the "solved location" of a piece. and that it exists because each piece is unique
-
-mention that face turns "turning the sides" is the most simple kind of turn, but there are other kinds of turns such as slice moves and wide moves but we just talk about the outer face turns or something, or perhaps we just say that ~~the centres never move~~ the centres always stay in the same arrangement (white is always opposite yellow, etc)
-
-then a dedicated section for the goal of the rubiks cube
-we want to reframe the goal of solving the cube from "all sides same colour" to "get every piece in its solved arrangement"i. perhaps this includes both permutation (it's in the right spot) and orientation (it's facing the right direction / it's twisted the right way)
 ## Solving methods
