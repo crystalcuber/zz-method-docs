@@ -8,6 +8,10 @@ import { Callout } from "nextra/components";
 import TwistyPlayer from "components/TwistyPlayer";
 import { STICKERINGS } from "lib";
 
+TODO: there needs to be more story. Frame the method as a moveset reduction method
+i.e. we're simplifying the cube, so after each step is an easier puzzle with fewer ways to turn.
+or that it preserves much more stuff
+
 The first step of the Roux Method is to solve this block on the left side of the cube:
 
 <TwistyPlayer
@@ -51,7 +55,7 @@ Try it out and experiment! Below are the solutions.
   If the center is at the front, right or back side, you can move it to the left with one move, like this:
   <TwistyPlayer
     rotateStickering="x2 y"
-    experimentalStickeringMaskOrbits="EDGES:IIIIIIIDIIII,CORNERS:IIIIIIII,CENTERS:I-IIII"
+    experimentalStickeringMaskOrbits="EDGES:IIIIIII-IIII,CORNERS:IIIIIIII,CENTERS:I-IIII"
     experimentalSetupAlg="Uw'"
     alg="Uw"
     cameraLatitude="-20"
@@ -65,7 +69,7 @@ Try it out and experiment! Below are the solutions.
   If the center is at the top or bottom, you can move it to the front or back, then solve like in Case 1.
     <TwistyPlayer
     rotateStickering="x2 y"
-    experimentalStickeringMaskOrbits="EDGES:IIIIIIIDIIII,CORNERS:IIIIIIII,CENTERS:I-IIII"
+    experimentalStickeringMaskOrbits="EDGES:IIIIIII-IIII,CORNERS:IIIIIIII,CENTERS:I-IIII"
     experimentalSetupAlg="Uw' Rw"
     alg="Rw' Uw"
     cameraLatitude="20"
@@ -82,7 +86,7 @@ Now we have the anchor and its matching center solved! This forms a block of two
   For the block that we just solved, we'll now avoid doing `Uw` moves because they break the center apart from the anchor.
 </Callout>
 
-## Part 2
+## Part 2: Front Pair
 
 
 ### Forming a pair
@@ -98,7 +102,7 @@ Now let's form a **pair**: a matching edge and corner. We'll make a pair to expa
   experimentalStickeringMaskOrbits="EDGES:IIIIIIIDI-II,CORNERS:IIIII-II,CENTERS:IDIIII"
 />
 
-We'll connect the blue-red edge with the blue-red-white corner. As we can see, those are the pieces that will expand the block.
+We'll connect the blue-red edge with the blue-red-white corner. As we can see, those are the pieces that will expand the block at the front.
 
 Start by moving the blue-red edge to the **loading spot**: the bottom-front position.
 
@@ -110,7 +114,7 @@ Secondly, move the blue-red-white corner to the top layer if it's not already th
 
 // insert example
 
-But if the corner is in the bottomo-front-left position, we have a problem. One move is not enough, because if we do one F-layer move to bring it to the top, the edge gets kicked out of the loading spot!
+But if the corner is in the bottom-front-left position, we have a problem. One move is not enough, because if we do one F-layer move to bring it to the top, the edge gets kicked out of the loading spot!
 
 // show example
 
@@ -173,9 +177,9 @@ Now we want to **insert** this pair to expand the block from Part 1. Try to figu
 
 Great! Now we have a single combined block. Remember to avoid moves that break blocks. Now, F moves will break this block so we will avoid them.
 
-## Part 3
+## Part 3: Back pair
 
-We'll make another pair, the same way as we did before. This time, the edge is blue-orange and the corner is white-blue-orange.
+We'll make another pair, the same way as we did before. This time, the edge is blue-orange and the corner is white-blue-orange. This pair belongs to the back of the First Block.
 
 ### A note about colors
 
@@ -196,3 +200,5 @@ This is the same process as in Part 2, so here are some examples:
 Inserting the pair works the same way as in Part 2. Just that we first move the pair to the back rather than the front.
 
 Congrats! Now the first block is solved.
+
+{/* TODO: for each part, there should be real walkthrough solves shown on real scrambles */}

@@ -11,19 +11,19 @@ export default {
     }
   },
   basics: {
-    title: "Cube Basics",
+    title: "Basics",
     type: "page",
   },
   roux: {
-    title: "Roux Method",
+    title: "Roux",
     type: "page",
   },
   zz: {
-    title: "ZZ Method",
+    title: "ZZ",
     type: "page",
   },
-  "method-dev": {
-    title: "Method Development",
+  "explore": {
+    title: "Explore",
     type: "page",
   },
   blog: {

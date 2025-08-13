@@ -4,19 +4,72 @@ description: Learn the basics of the Rubik's Cube
 author: crystalcuber
 ---
 
-WIP
+import TwistyPlayer from "components/TwistyPlayer";
 
-this is the index page of the cube basics section
+The Rubik's Cube is a famously difficult puzzle, at least when trying to solve it alone. But with the help of a **solving method**, you can learn to solve the Cube! A method breaks the cube down into several simple steps.
 
-the structure of the other pages should be something like
+In this guide, we'll learn the basics of the Cube: how it works and how it turns. Then we'll be ready to learn how to solve it!
 
-- introduction
-- cube basics
-  - pieces of the cube
-  - cube notation
-- cube tutorial
-  - 8355 method introduction
-  - 8 bottom pieces
-  - 3 middle layer edges
-  - 5 edges
-  - 5 corners
+## How the Cube Works
+
+Let's start by revealing a secret of the Rubik's Cube. From the outside, it looks like a bunch of coloured stickers moving around. But if we take it apart, there's more to see:
+
+TODO: photo of disassembled Rubik's Cube. Label the core, edges, centres and corners with `<figcaption>`
+
+It's made of **pieces**, which are _groups_ of stickers that move together! We should see the cube as pieces that carry stickers around, rather than stickers moving on their own.
+
+<div className="flex flex-col sm:flex-row">
+  <TwistyPlayer
+    controlPanel="none"
+    className="size-36"
+    experimentalStickeringMaskOrbits="EDGES:XXXXXXXXXXXX,CORNERS:--------,CENTERS:XXXXXX"
+    hintFacelets="none"
+  />
+  **Corners** are pieces that carry 3 stickers. There are 8 corners in total.
+</div>
+
+<div className="flex flex-col sm:flex-row">
+  <TwistyPlayer
+    controlPanel="none"
+    className="size-36"
+    experimentalStickeringMaskOrbits="EDGES:------------,CORNERS:XXXXXXXX,CENTERS:XXXXXX"
+    hintFacelets="none"
+  />
+  **Edges** are pieces with 2 stickers. There are 12 edges.
+</div>
+
+<div className="flex flex-col sm:flex-row">
+  <TwistyPlayer
+    controlPanel="none"
+    className="size-36"
+    experimentalStickeringMaskOrbits="EDGES:XXXXXXXXXXXX,CORNERS:XXXXXXXX,CENTERS:------"
+    hintFacelets="none"
+  />
+  **Centres** are pieces that only have a single sticker. There are 6 centres: one on each side.
+</div>
+
+# TEMP
+  <TwistyPlayer
+    controlPanel="none"
+    className="size-36"
+    experimentalStickeringMaskOrbits="EDGES:IIIII-II-I-I,CORNERS:IIII-II-,CENTERS:III-II"
+    hintFacelets="none"
+  />
+
+
+
+## Cube turns
+simple guide that outlines how turns move pieces around
+like centres don't get moved around by face turns, and how corners and edges "don't mix" (have separate orbits)
+and definitely link to a full guide somewhere else 
+idea: have a little widget that either shows a bunch of random moves, or lets you mash some buttons to randomly turn the cube
+either way, the point of the widget is to show certain properties of the cube, such as centres staying in place, stickers moving in groups of corners/edges, corners/edges in separate orbits etc.
+actually it can be a fully automatic thing, like remember Lucas' MKBHD demo
+
+also have a bit that talks about the "solved location" of a piece. and that it exists because each piece is unique
+
+mention that face turns "turning the sides" is the most simple kind of turn, but there are other kinds of turns such as slice moves and wide moves but we just talk about the outer face turns or something, or perhaps we just say that ~~the centres never move~~ the centres always stay in the same arrangement (white is always opposite yellow, etc)
+
+then a dedicated section for the goal of the rubiks cube
+we want to reframe the goal of solving the cube from "all sides same colour" to "get every piece in its solved arrangement"i. perhaps this includes both permutation (it's in the right spot) and orientation (it's facing the right direction / it's twisted the right way)
+## Solving methods

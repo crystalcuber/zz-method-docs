@@ -1,3 +1,11 @@
+sune: do alg with oriented corner at UFL position
+antisune: sune twice with oriented corner at UFL position
+L, T: put yellow sticker at **F**UL, both setup to antisune
+H: headlights facing the left and right, setup to sune
+U: headlights facing the front, setup to sune
+pi: headlights facing the left, setup to sune
+
+yeah this is taken from Dan https://www.youtube.com/watch?v=dVqfBvWrqHk
 
 If you're new to the Rubik's Cube, this is the place to learn how the Cube works!
 

@@ -80,3 +80,11 @@ console.log(getCustomStickeringMaskOrbits({
   solved: ['DFL', 'FL'],
   dim: ['DL', 'L']
 }))
+
+console.log(getCustomStickeringMaskOrbits({
+  solved: ['DFL', 'FL'],
+}, "invisible"))
+
+console.log(getCustomStickeringMaskOrbits({
+  solved: ['DFR', 'FR', 'DR', 'BR', 'DBR', 'R'],
+}, "invisible"))
