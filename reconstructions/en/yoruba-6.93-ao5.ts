@@ -1,6 +1,5 @@
 import { Reconstruction } from "../types";
 
-// TODO: solves are from a different average, fill them out!
 export const YOUTUBE_VIDEO_ID = "sFfUZXT5pUM";
 export const RECONS: Reconstruction[] = [
   {
@@ -15,7 +14,7 @@ R U' R' U R U R' // Second Pair
 U' R' U' R U R' U2 R // Third Pair
 L U L' U' L U2 L' U' L U L' // Last Pair
 R' U' R U' R' U2 R // OCLL
-U R' F R f' R' F R2 U R' U' R' F' R2 U R' S U //PLL`,
+U R' F R f' R' F R2 U R' U' R' F' R2 U R' S U // PLL`,
     time: "6.94",
     movecount: 67,
     reconstructor: "Yoruba",
@@ -26,7 +25,7 @@ U R' F R f' R' F R2 U R' U' R' F' R2 U R' S U //PLL`,
     scramble: "L2 U2 F L U2 F2 B' U L F' U F2 U2 F2 L2 B2 U R'",
     solution: `y2 // inspection
 L (F B') R' U' F' R D' L' D // EOCross
-L' U L2 U2 L' U' L U2 L' //missplanned my first pair got to improvise
+L' U L2 U2 L' U' L U2 L' // missplanned my first pair, got to improvise
 D' U2 R U R' D // Second Pair
 R U2 R' U R U' R' // Third Pair
 U2 L' U2 L U' L' U' L U' L' U L // OLS
@@ -46,7 +45,7 @@ U' R U R' L U L' // First Pair
 L' U' L U R' U' R // Second Pair
 U' R U2 R' U' R U R' // Third Pair
 L' U L U2 L' U' L // Last Pair
-U' F R' U2 R F' R' F U2 F' R U //ZBLL`,
+U' F R' U2 R F' R' F U2 F' R U // ZBLL`,
     time: "(6.07)",
     movecount: 48,
     reconstructor: "Yoruba",
@@ -56,7 +55,7 @@ U' F R' U2 R F' R' F U2 F' R U //ZBLL`,
   {
     scramble: "F2 R2 F L' D F' U B2 D L2 F2 U2 B2 D F U F'",
     solution: `y2 // inspection
-F' U' R' F D R D' // EOcross
+F' U' R' F D R D' // EOCross
 U R' U R U' R U R' // First Pair
 L U L2 U' L2 U L2 // Second Pair
 // better solution: L' U L U2 L' U2 L2 U' L' to solve left block
