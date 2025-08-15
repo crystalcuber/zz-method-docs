@@ -5,16 +5,18 @@ author: crystalcuber
 ---
 
 import TwistyPlayer from "components/TwistyPlayer";
+import Image from 'next/image'
 
 Have you ever wanted to learn how to solve a Rubik's Cube? You're in the right place! In this guide, we'll learn the basics of the Cube. By the end, you'll be ready to learn a solving method!
 
 ## How the Cube Works
 
-Let's start by revealing a secret of the Rubik's Cube. From the outside, it looks like a bunch of coloured stickers moving around. But if we take it apart, there's more to see:
+**Stickers** are the coloured squares on the outside of the cube.
 
-TODO: photo of disassembled Rubik's Cube. Label the core, edges, centres and corners with `<figcaption>`
+Let's start by revealing a secret of the Rubik's Cube. From the outside, it looks like a bunch of stickers moving around. But if we take it apart, there's more to see:
+<Image src="/assets/rubiks-cube-pieces.webp" alt="A disassembled Rubik's Cube" width={500} height={281} />
 
-It's made of **pieces**, which are _groups_ of stickers that move together! The cube is made of pieces that carry stickers around, rather than stickers moving on their own.
+It's made of **pieces**, which are _groups_ of stickers that move together! There are three types of pieces:
 
 <div className="flex flex-col sm:flex-row">
   <TwistyPlayer
@@ -61,6 +63,9 @@ Play around with the cube and do random turns, or use the widget below. Observe 
 
 ## Solving Goal
 
+We can use the 
+We can use what we've learned to figure out what it means to solve the Cube.
+
 we want to reframe the goal of solving the cube from "all sides same colour" to "get every piece in its solved arrangement"
 
 make very clear that the centres define what colour belongs solved on that side. we can't choose to solve green next to blue. centres dictate the colour to be solved on its side.
@@ -72,6 +77,7 @@ It seems that the goal is to solve the cube, one side at a time.
 But when we try, we find a problem:
 Suppose we solved the blue side, and now we want to solve the orange side.
 
+all the pieces are unique. just look at the image before, you can see no two edges are alike. no two corners are alike.
 
 
 ## Solving methods
