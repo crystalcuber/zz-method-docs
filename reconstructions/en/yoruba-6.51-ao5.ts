@@ -83,7 +83,7 @@ U U2 R' U' R2 D r' U2 r D' R2 U R U R' U2 R U' // ZBLL`,
 - EOCross+1: 1.67
 - ZZF2L: 2.11
 - ZBLL: 3.05
-Missed an easy XEOcross z2 away from chosen: F R L2 D F' D2 R2' U R
+Missed an easy XEOcross that was z2 away from the chosen orientation: F R L2 D F' D2 R2' U R
 Unfortunate lockup on this solve prevented me from getting the 6.45 best possible average`,
   },
 ];
