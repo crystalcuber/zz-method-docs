@@ -10,11 +10,10 @@ export default function YouTubeEmbed({ embedId }: YouTubeEmbedProps) {
   return (
     <div className={styles.video}>
       <iframe
+        loading="lazy"
         className={styles.iframe}
         src={`https://www.youtube-nocookie.com/embed/${embedId}`}
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-        title="Embedded YouTube video"
+        allow="accelerometer; clipboard-write; encrypted-media; fullscreen; gyroscope; picture-in-picture"
       />
     </div>
   );
