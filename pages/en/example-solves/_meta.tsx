@@ -7,6 +7,7 @@ export default {
   "yoruba-advanced-example-25": "Yoruba's Advanced Examples",
   "gen-8.99-ao5": "Gen's Official 8.99 ao5",
   "gen-11.68-oh-ao5": "Gen's Official OH 11.68 ao5",
+  "luna-7.73-ao12": "Luna's 7.73 ao12",
   "luna-9.00-ao25": "Luna's 9.00 ao25",
   "jouda-11.26-oh-ao5": "Jouda's OH 11.26 ao5",
   "rouxzzcfop-7.64-ao12": "rouxzzcfop's 7.64 ao12"

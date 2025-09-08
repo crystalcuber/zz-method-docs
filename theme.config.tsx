@@ -29,10 +29,10 @@ const config: DocsThemeConfig = {
   //   link: "https://discord.com",
   // },
   docsRepositoryBase: "https://github.com/ericx20/zz-method-docs/tree/main",
-  banner: {
-    key: "2025-08-13_yoruba_zzwr",
-    content: <Link href="/blog/yoruba-6.51-zzwr">6.51 ZZ World Record average by Yoruba!</Link>,
-  },
+  // banner: {
+  //   key: "2025-08-13_yoruba_zzwr",
+  //   content: <Link href="/blog/yoruba-6.51-zzwr">6.51 ZZ World Record average by Yoruba!</Link>,
+  // },
   i18n: [
     { locale: 'en', name: 'English' },
     // { locale: 'fr', name: 'Français' },
