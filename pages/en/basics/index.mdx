@@ -7,16 +7,19 @@ author: crystalcuber
 import TwistyPlayer from "components/TwistyPlayer";
 import Image from 'next/image'
 
-Have you ever wanted to learn how to solve a Rubik's Cube? You're in the right place! In this guide, we'll learn the basics of the Cube. By the end, you'll be ready to learn a solving method!
+Have you ever wanted to learn how to solve a Rubik's Cube? You're in the right place! In this guide, we'll learn the basics of the cube. By the end, you'll be ready to learn a solving method!
 
 ## How the Cube Works
 
-**Stickers** are the coloured squares on the outside of the cube.
+On the outside, the cube is covered in coloured squares called **stickers**. It seems that the cube is made of many stickers that move around.
 
-Let's start by revealing a secret of the Rubik's Cube. From the outside, it looks like a bunch of stickers moving around. But if we take it apart, there's more to see:
+But what does the cube look like on the inside? Let's take it apart.
+
 <Image src="/assets/rubiks-cube-pieces.webp" alt="A disassembled Rubik's Cube" width={500} height={281} />
 
-It's made of **pieces**, which are _groups_ of stickers that move together! There are three types of pieces:
+It's made of **pieces**, which are _groups_ of stickers that move together! Stickers attached to the same piece can only move together.
+
+There are three types of pieces:
 
 <div className="flex flex-col sm:flex-row">
   <TwistyPlayer
@@ -25,7 +28,7 @@ It's made of **pieces**, which are _groups_ of stickers that move together! Ther
     experimentalStickeringMaskOrbits="EDGES:XXXXXXXXXXXX,CORNERS:--------,CENTERS:XXXXXX"
     hintFacelets="none"
   />
-  **Corners** are pieces that carry 3 stickers. They are always located in these 8 corner spots.
+  **Corners** have 3 stickers. They are always located in these 8 corner spots.
 </div>
 
 <div className="flex flex-col sm:flex-row">
@@ -35,7 +38,7 @@ It's made of **pieces**, which are _groups_ of stickers that move together! Ther
     experimentalStickeringMaskOrbits="EDGES:------------,CORNERS:XXXXXXXX,CENTERS:XXXXXX"
     hintFacelets="none"
   />
-  **Edges** are pieces that carry 2 stickers. They are always located in these 12 edge spots, so they will never "mix" with corners. An edge can't move to a corner spot, and vice versa.
+  **Edges** have 2 stickers. They are always located in these 12 edge spots. So they will never "mix" with corners: an edge can't move to a corner spot, and vice versa.
 </div>
 
 <div className="flex flex-col sm:flex-row">
@@ -45,7 +48,7 @@ It's made of **pieces**, which are _groups_ of stickers that move together! Ther
     experimentalStickeringMaskOrbits="EDGES:XXXXXXXXXXXX,CORNERS:XXXXXXXX,CENTERS:------"
     hintFacelets="none"
   />
-  **Centres** carry a single sticker. They are always located in these 6 centre spots, one per side. In fact, they will never mix with each other! No matter how you turn the sides, a centre will always stay on its side.
+  **Centres** have a single sticker. They are always located in these 6 centre spots, one per side. No matter how you turn the sides, a centre will always stay on the same side.
 </div>
 
 Play around with the cube and do random turns, or use the widget below. Observe the following:
