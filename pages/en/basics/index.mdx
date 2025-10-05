@@ -5,7 +5,10 @@ author: crystalcuber
 ---
 
 import TwistyPlayer from "components/TwistyPlayer";
-import Image from 'next/image'
+import Image from "next/image";
+import { Callout } from "nextra/components";
+
+{/* TODO: actually badmephisto's tutorial does a better job explaining. copy his */}
 
 Have you ever wanted to learn how to solve a Rubik's Cube? You're in the right place! In this guide, we'll learn the basics of the cube. By the end, you'll be ready to learn a solving method!
 
@@ -15,9 +18,20 @@ On the outside, the cube is covered in coloured squares called **stickers**. It 
 
 But what does the cube look like on the inside? Let's take it apart.
 
-<Image src="/assets/rubiks-cube-pieces.webp" alt="A disassembled Rubik's Cube" width={500} height={281} />
+<Image
+  src="/assets/rubiks-cube-pieces.webp"
+  alt="A disassembled Rubik's Cube"
+  width={500}
+  height={281}
+/>
 
 It's made of **pieces**, which are _groups_ of stickers that move together! Stickers attached to the same piece can only move together.
+
+<Callout>
+  {/* TODO REWRITE */}
+  By seeing the cube as made of pieces rather than just stickers, this helps us solve
+  the cube as we will see later.
+</Callout>
 
 There are three types of pieces:
 
@@ -38,7 +52,8 @@ There are three types of pieces:
     experimentalStickeringMaskOrbits="EDGES:------------,CORNERS:XXXXXXXX,CENTERS:XXXXXX"
     hintFacelets="none"
   />
-  **Edges** have 2 stickers. They are always located in these 12 edge spots. So they will never "mix" with corners: an edge can't move to a corner spot, and vice versa.
+  **Edges** have 2 stickers. They are always located in these 12 edge spots. So they
+  will never "mix" with corners: an edge can't move to a corner spot, and vice versa.
 </div>
 
 <div className="flex flex-col sm:flex-row">
@@ -48,15 +63,19 @@ There are three types of pieces:
     experimentalStickeringMaskOrbits="EDGES:XXXXXXXXXXXX,CORNERS:XXXXXXXX,CENTERS:------"
     hintFacelets="none"
   />
-  **Centres** have a single sticker. They are always located in these 6 centre spots, one per side. No matter how you turn the sides, a centre will always stay on the same side.
+  **Centres** have a single sticker. They are always located in these 6 centre spots,
+  one per side. Centres are special: they always stay on the same side when you turn
+  the sides.
 </div>
 
-Play around with the cube and do random turns, or use the widget below. Observe the following:
-- Stickers move together in groups of pieces
+Play around with the cube and do random turns, or use the widget below. Observe that:
+
+- Stickers on the same piece move together
 - Corner, edge and centre pieces don't mix
 - Centres stay on the same side when you turn the sides
 
 {/* TODO: make this a custom component that has just a play/pause button? */}
+
 <TwistyPlayer
   experimentalSetupAlg="R2 D' U2 B2 L2 D R2 U2 L2 U' L F D2 R2 B' D2 R D' B2 L2"
   alg="D B' L' U L2 D' L2 R2 U' R2 F2 D' R2 U2 R' B2 D L R B' F'"
@@ -66,21 +85,23 @@ Play around with the cube and do random turns, or use the widget below. Observe 
 
 ## Solving Goal
 
-We can use the 
+How do we approach solving the cube?
+
+On the surface, it seems we should move matching stickers to the same side. Form each side one-by-one. However, we run into a few problems:
+
+We can use the
 We can use what we've learned to figure out what it means to solve the Cube.
 
 we want to reframe the goal of solving the cube from "all sides same colour" to "get every piece in its solved arrangement"
 
 make very clear that the centres define what colour belongs solved on that side. we can't choose to solve green next to blue. centres dictate the colour to be solved on its side.
 
-in general, the idea of stickers being attached to pieces, that imposes a restriction on how the stickers can move around. 
-
+in general, the idea of stickers being attached to pieces, that imposes a restriction on how the stickers can move around.
 
 It seems that the goal is to solve the cube, one side at a time.
 But when we try, we find a problem:
 Suppose we solved the blue side, and now we want to solve the orange side.
 
 all the pieces are unique. just look at the image before, you can see no two edges are alike. no two corners are alike.
-
 
 ## Solving methods
