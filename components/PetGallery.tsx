@@ -53,6 +53,16 @@ const pets: Pet[] = [
     src: "/assets/pets/sir_harold_iii.jpg",
     owner: "YeetPizza74",
   },
+  {
+    name: "Muối (Salt)",
+    src: "/assets/pets/muoi.jpg",
+    owner: "Nguyen Dinh Tri",
+  },
+  {
+    name: "Gạo (Rice)",
+    src: "/assets/pets/gao.jpg",
+    owner: "Nguyen Dinh Tri",
+  },
 ];
 
 export default function PetGallery() {
