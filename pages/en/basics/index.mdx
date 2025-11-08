@@ -6,32 +6,30 @@ author: crystalcuber
 
 import TwistyPlayer from "components/TwistyPlayer";
 import Image from "next/image";
-import { Callout } from "nextra/components";
 
-{/* TODO: actually badmephisto's tutorial does a better job explaining. copy his */}
-
-Have you ever wanted to learn how to solve a Rubik's Cube? You're in the right place! In this guide, we'll learn the basics of the cube. By the end, you'll be ready to learn a solving method!
+In this guide, we'll learn the basics of the Rubik's Cube. By the end, you'll be ready to learn a solving method!
 
 ## How the Cube Works
 
-On the outside, the cube is covered in coloured squares called **stickers**. It seems that the cube is made of many stickers that move around.
+Let's begin with how the cube works.
 
-But what does the cube look like on the inside? Let's take it apart.
+The outside of the cube is covered with coloured squares called **stickers**. It seems that the cube is simply made of many stickers that can freely move around.
 
+But what does it look like on the inside? Here is a disassembled cube:
+<br />
+<figure>
 <Image
   src="/assets/rubiks-cube-pieces.webp"
   alt="A disassembled Rubik's Cube"
   width={500}
   height={281}
 />
+<figcaption><em>From left to right: 12 edges, the core, and 8 corners</em></figcaption>
+</figure>
 
-It's made of **pieces**, which are _groups_ of stickers that move together! Stickers attached to the same piece can only move together.
-
-<Callout>
-  {/* TODO REWRITE */}
-  By seeing the cube as made of pieces rather than just stickers, this helps us solve
-  the cube as we will see later.
-</Callout>
+The cube is made of:
+- The **core**: a structure in the middle of the cube that holds the other parts together.
+- **Pieces**: parts that have coloured stickers.
 
 There are three types of pieces:
 
@@ -39,10 +37,10 @@ There are three types of pieces:
   <TwistyPlayer
     controlPanel="none"
     className="size-36"
-    experimentalStickeringMaskOrbits="EDGES:XXXXXXXXXXXX,CORNERS:--------,CENTERS:XXXXXX"
+    experimentalStickeringMaskOrbits="EDGES:XXXXXXXXXXXX,CORNERS:XXXXXXXX,CENTERS:------"
     hintFacelets="none"
   />
-  **Corners** have 3 stickers. They are always located in these 8 corner spots.
+  **Centres** are pieces with a single sticker. There are six of them, and 
 </div>
 
 <div className="flex flex-col sm:flex-row">
@@ -60,13 +58,19 @@ There are three types of pieces:
   <TwistyPlayer
     controlPanel="none"
     className="size-36"
-    experimentalStickeringMaskOrbits="EDGES:XXXXXXXXXXXX,CORNERS:XXXXXXXX,CENTERS:------"
+    experimentalStickeringMaskOrbits="EDGES:XXXXXXXXXXXX,CORNERS:--------,CENTERS:XXXXXX"
     hintFacelets="none"
   />
-  **Centres** have a single sticker. They are always located in these 6 centre spots,
-  one per side. Centres are special: they always stay on the same side when you turn
-  the sides.
+  **Corners** have 3 stickers. They are always located in these 8 corner spots.
 </div>
+
+
+first begin iwth the core/centres. you can see those stickers don't actually move at all, they spin fixed in place
+and then the corners and edges are pieces that move around, they carry three/two stickers that can only move together.
+
+then talk about how the pieces are all unique, each centre dictates the solved colour of its side, and each corner/edge has a place where it belongs
+
+It's made of **pieces**, which are _groups_ of stickers that move together! Stickers attached to the same piece can only move together.
 
 Play around with the cube and do random turns, or use the widget below. Observe that:
 
