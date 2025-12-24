@@ -6,8 +6,17 @@ const withNextra = nextra({
 });
 
 export default withNextra({
-  i18n: {
-    locales: ["en", "fr", "he", "zh"],
-    defaultLocale: "en",
-  },
+  async redirects() {
+    return [
+      {
+        source: "/en",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/en/:slug*",
+        destination: "/:slug*",
+        permanent: true,
+      }]
+  }
 });
