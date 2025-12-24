@@ -33,12 +33,9 @@ const config: DocsThemeConfig = {
   //   key: "2025-08-13_yoruba_zzwr",
   //   content: <Link href="/blog/yoruba-6.51-zzwr">6.51 ZZ World Record average by Yoruba!</Link>,
   // },
-  i18n: [
-    { locale: 'en', name: 'English' },
-    // { locale: 'fr', name: 'Français' },
-    // { locale: 'he', name: 'עִברִית', direction: 'rtl' },
-    // { locale: 'zh', name: '中文' },
-  ],
+  // i18n: [
+  //   { locale: 'en', name: 'English' },
+  // ],
   head() {
     const { asPath, defaultLocale, locale } = useRouter();
     const { frontMatter } = useConfig();
