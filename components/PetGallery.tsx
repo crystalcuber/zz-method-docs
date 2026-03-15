@@ -63,6 +63,11 @@ const pets: Pet[] = [
     src: "/assets/pets/gao.jpg",
     owner: "Nguyen Dinh Tri",
   },
+  {
+    name: "Belle",
+    src: "/assets/pets/belle-caleb-fox.jpg",
+    owner: "Caleb Fox",
+  },
 ];
 
 export default function PetGallery() {
