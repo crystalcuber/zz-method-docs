@@ -9,16 +9,6 @@ type Pet = {
 
 const pets: Pet[] = [
   {
-    name: "Harley",
-    src: "/assets/pets/harley.jpg",
-    owner: "S1neWav_",
-  },
-  {
-    name: "Cosmo",
-    src: "/assets/pets/cosmo.jpg",
-    owner: "S1neWav_",
-  },
-  {
     name: "Spumoni",
     src: "/assets/pets/spumoni.jpg",
     owner: "Gen",

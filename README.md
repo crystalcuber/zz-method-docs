@@ -26,7 +26,6 @@ This project is licensed under the [MIT License](./LICENSE).
 
 - [crystalcuber](https://www.youtube.com/@crystalcuber)
 - [yoruba](https://www.youtube.com/@yoruba7807)
-- [S1neWav\_](https://www.youtube.com/@S1neWav_)
 
 ### Feedback
 
