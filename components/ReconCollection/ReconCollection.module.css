@@ -33,6 +33,7 @@
 
 .solveButton {
   width: 100%;
+  text-wrap: nowrap;
 }
 
 .button, .dropdown {
