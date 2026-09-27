@@ -25,7 +25,7 @@ This project is licensed under the [MIT License](./LICENSE).
 ### ZZMethod.com team
 
 - [crystalcuber](https://www.youtube.com/@crystalcuber)
-- [yoruba](https://www.youtube.com/@yoruba7807)
+- [Krzysztof Bloch (yoruba)](https://www.youtube.com/@yoruba7807)
 
 ### Feedback
 
