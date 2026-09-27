@@ -71,12 +71,12 @@ const config: DocsThemeConfig = {
           {frontMatter?.title}
         </h1>
         {frontMatter?.date && (
-          <p className="_block _text-sm _text-gray-500 dark:_text-gray-400">
+          <p className="_block _text-sm _text-gray-500 dark:_text-gray-400 _mb-2">
             {frontMatter.date}
           </p>
         )}
         {frontMatter?.author && (
-          <p className="_block _text-sm _text-gray-500 dark:_text-gray-400">
+          <p className="_block _text-sm _text-gray-500 dark:_text-gray-400 _mb-2">
             {authorsTextFn(frontMatter.author)}
           </p>
         )}
